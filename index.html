@@ -11,15 +11,21 @@
 <body>
 <div>
     <form id="cashback-form">
-        <input id="special-amount-input">
-        <input id="other-amount-input">
+        <div>
+            <input id="special-amount-input">
+            <span id="special-amount-error"></span>
+        </div>
+       <div>
+           <input id="other-amount-input">
+           <span id="other-amount-error"></span>
+       </div>
         <button id="calculate">Рассчитать</button>
     </form>
     <div>
         <h3>Ваш кэшбэк</h3>
         <p>По специальным категориям <span id="special-cashback"></span></p>
-        <p>По остальным расходам<span id="other-cashback"></span></p>
-        <p>Итого<span id="total-cashback"></span></p>
+        <p>По остальным расходам <span id="other-cashback"></span></p>
+        <p>Итого <span id="total-cashback"></span></p>
     </div>
 </div>
 <script src="js/app.js"></script>
