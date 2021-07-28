@@ -16,17 +16,8 @@ function calculateCashback(specialCategoryPurchases, otherCategoryPurchases) {
     };
 }
 
-const cashback = calculateCashback(5000, 10000);
-console.log(cashback);
-
 function handleSubmit(evt) {
     evt.preventDefault(); //отменяем поведение по умолчанию
-
-    const specialAmountErrorEl = document.getElementById('special-amount-error');
-    const otherAmountErrorEl = document.getElementById('other-amount-error');
-    const specialCashbackEl = document.getElementById('special-cashback');
-    const otherCashbackEl = document.getElementById('other-cashback');
-    const totalCashbackEl = document.getElementById('total-cashback');
 
     specialAmountErrorEl.textContent = '';
     otherAmountErrorEl.textContent = '';
@@ -34,7 +25,6 @@ function handleSubmit(evt) {
     otherCashbackEl.textContent = '';
     totalCashbackEl.textContent = '';
 
-    const specialAmountInputEl = document.getElementById('special-amount-input');
     const specialAmount = Number(specialAmountInputEl.value);
     if (Number.isNaN(specialAmount)) {
         specialAmountErrorEl.textContent = `Неверное значение. Введите число, например, 10000`;
@@ -45,7 +35,7 @@ function handleSubmit(evt) {
         return;
     }
 
-    const otherAmountInputEl = document.getElementById('other-amount-input');
+
     const otherAmount = Number(otherAmountInputEl.value);
     if (Number.isNaN(otherAmount)) {
         otherAmountErrorEl.textContent = `Неверное значение. Введите число, например, 10000`;
@@ -65,5 +55,15 @@ function handleSubmit(evt) {
 
 const formEl = document.getElementById('cashback-form');
 formEl.onsubmit = handleSubmit;
+
+const specialAmountInputEl = document.getElementById('special-amount-input');
+const otherAmountInputEl = document.getElementById('other-amount-input');
+const specialAmountErrorEl = document.getElementById('special-amount-error');
+const otherAmountErrorEl = document.getElementById('other-amount-error');
+const specialCashbackEl = document.getElementById('special-cashback');
+const otherCashbackEl = document.getElementById('other-cashback');
+const totalCashbackEl = document.getElementById('total-cashback');
+
+
 
 
