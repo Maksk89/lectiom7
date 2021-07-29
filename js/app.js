@@ -47,14 +47,14 @@ function handleSubmit(evt) {
     }
 
     const result = calculateCashback(specialAmount, otherAmount);
-    specialCashbackEl.textContent = `${result.specialCategoryCashback} руб. `;
-    otherCashbackEl.textContent = `${result.otherCategoryCashback} руб. `;
-    totalCashbackEl.textContent = `${result.totalCashback} руб. `;
+    specialCashbackEl.textContent = `${result.specialCategoryCashback} `;
+    otherCashbackEl.textContent = `${result.otherCategoryCashback} `;
+    totalCashbackEl.textContent = `${result.totalCashback} `;
 
 }
 
 const formEl = document.getElementById('cashback-form');
-formEl.onsubmit = handleSubmit;
+formEl.addEventListener('submit', handleSubmit);
 
 const specialAmountInputEl = document.getElementById('special-amount-input');
 const otherAmountInputEl = document.getElementById('other-amount-input');
